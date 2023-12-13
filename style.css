@@ -1,0 +1,256 @@
+:root {
+    --bg-body: hsl(210, 46%, 95%);
+    --white-color: rgb(255, 255, 255);
+    --bg-popUp: hsl(217, 19%, 35%);
+    --bg-hover-button: rgb(195, 190, 190);
+    --bg-focus-button: hsl(212, 23%, 69%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: var(--bg-body);
+}
+
+.container {
+    margin: clamp(0.5rem, 0.062rem + 7vw, 3.125rem) 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: clamp(0.1rem, 0.012rem + 1.4vw, 0.625rem);
+}
+
+.drawers {
+    width: 100%;
+    display: flex;
+    border-top-right-radius: clamp(0.1rem, 0.012rem + 1.4vw, 0.625rem);
+    border-top-left-radius: clamp(0.1rem, 0.012rem + 1.4vw, 0.625rem);
+}
+
+.drawers>img {
+    width: 100%;
+    border-top-right-radius: clamp(0.1rem, 0.012rem + 1.4vw, 0.625rem);
+    border-top-left-radius: clamp(0.1rem, 0.012rem + 1.4vw, 0.625rem);
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    background-color: var(--white-color);
+    border-bottom-left-radius: clamp(0.1rem, 0.012rem + 1.4vw, 0.625rem);
+    border-bottom-right-radius: clamp(0.1rem, 0.012rem + 1.4vw, 0.625rem);
+}
+
+.details>h2 {
+    font-size: clamp(0.3rem, 0.067rem + 3.733vw, 1.7rem);
+    padding-left: clamp(0.5rem, 0.062rem + 7vw, 3.125rem);
+    padding-right: clamp(0.5rem, 0.062rem + 7vw, 3.125rem);
+}
+
+.details>p {
+    font-size: clamp(0.2rem, 0rem + 3.2vw, 1.4rem);
+    padding-left: clamp(0.5rem, 0.062rem + 7vw, 3.125rem);
+    padding-right: clamp(0.5rem, 0.062rem + 7vw, 3.125rem);
+}
+
+.action-logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1rem, -1.958rem + 47.333vw, 18.75rem);
+    margin-bottom: clamp(0.05rem, -0.046rem + 1.533vw, 0.625rem);
+}
+
+.info-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.2rem, 0.025rem + 2.8vw, 1.25rem);
+}
+
+.info-logo p {
+    font-size: clamp(0.2rem, 0.095rem + 1.68vw, 0.83rem);
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: clamp(0.5rem, 0.062rem + 7vw, 3.125rem);
+}
+
+.logo>img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: clamp(0.5rem, 0.167rem + 5.333vw, 2.5rem);
+    height: clamp(0.5rem, 0.167rem + 5.333vw, 2.5rem);
+    border-radius: 50%;
+}
+
+button>img {
+    width: clamp(0.2rem, 0.03rem + 2.717vw, 1.219rem);
+}
+
+button:hover {
+    background-color: var(--bg-hover-button);
+}
+
+button:focus {
+    background-color: var(--bg-focus-button);
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    width: clamp(0.2rem, -0.017rem + 3.467vw, 1.5rem);
+}
+
+.logos>img {
+    width: 100%;
+}
+
+.pop-up-logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-popUp);
+    color: var(--white-color);
+    width: 90%;
+    gap: clamp(0.5rem, 0.25rem + 4vw, 2rem);
+    border-bottom-right-radius: clamp(0.1rem, 0.012rem + 1.4vw, 0.625rem);
+    border-bottom-left-radius: clamp(0.1rem, 0.012rem + 1.4vw, 0.625rem);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.pop-up-logo>h5 {
+    font-size: clamp(0.1rem, -0.05rem + 2.4vw, 1rem);
+    letter-spacing: clamp(0.1rem, 0.012rem + 1.4vw, 0.625rem);
+}
+
+@media(min-width:43.813rem) {
+
+    body {
+        min-height: 100vh;
+    }
+
+    .container {
+        margin: 0;
+        width: 60%;
+        height: clamp(7rem, 1.743rem + 22.368vw, 21.875rem);
+        flex-direction: row;
+        box-shadow: 0px 10px 10px 10px rgba(171, 180, 218, 0.332);
+    }
+
+    .drawers {
+        width: 45%;
+        height: 100%;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    .drawers>img {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    .details {
+        width: 55%;
+        height: 100%;
+        padding: clamp(0.1rem, -0.086rem + 0.789vw, 0.625rem) clamp(0.5rem, 0.014rem + 2.068vw, 1.875rem) clamp(0.3rem, -0.036rem + 1.429vw, 1.25rem) clamp(0.5rem, -0.207rem + 3.008vw, 2.5rem);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .details>h2 {
+        font-size: clamp(0.3rem, -0.124rem + 1.805vw, 1.5rem);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .details>p {
+        font-size: clamp(0.3rem, 0.053rem + 1.053vw, 1rem);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .action-logo {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: unset;
+        margin-bottom: 0;
+    }
+
+    .info-logo {
+        gap: clamp(0.3rem, -0.036rem + 1.429vw, 1.25rem);
+    }
+
+    .info-logo p {
+        font-size: clamp(0.2rem, -0.023rem + 0.947vw, 0.83rem);
+        margin: auto;
+    }
+
+    .logo {
+        width: clamp(0.8rem, -0.022rem + 3.496vw, 3.125rem);
+    }
+
+    button {
+        width: clamp(0.8rem, 0.199rem + 2.556vw, 2.5rem);
+        height: clamp(0.8rem, 0.199rem + 2.556vw, 2.5rem);
+    }
+
+    button>img {
+        width: clamp(0.4rem, 0.111rem + 1.232vw, 1.219rem);
+    }
+
+    .logos {
+        display: flex;
+        align-items: center;
+        width: clamp(0.4rem, 0.1rem + 1.278vw, 1.25rem);
+    }
+
+    .logos>img {
+        width: 100%;
+    }
+
+    .pop-up-logo {
+        width: clamp(3rem, -0.357rem + 14.286vw, 12.5rem);
+        border-radius: clamp(0.1rem, -0.086rem + 0.789vw, 0.625rem);
+        gap: clamp(0.3rem, -0.036rem + 1.429vw, 1.25rem);
+        top: clamp(20.5rem, 19.859rem + 2.726vw, 22.313rem);
+        right: clamp(4.5rem, 0.745rem + 15.977vw, 15.125rem);
+    }
+
+    .pop-up-logo>h5 {
+        letter-spacing: 0;
+        font-size: clamp(0.2rem, -0.023rem + 0.947vw, 0.83rem);
+        margin: clamp(0.2rem, -0.061rem + 1.11vw, 0.938rem) 0;
+    }
+}
